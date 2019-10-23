@@ -1,0 +1,10 @@
+.App{
+  padding-top: 4rem;
+  background: #fafafa;
+}
+.navbar {
+  background-color: #ef5350 !important;
+}
+.card-title{
+  text-transform: capitalize;
+}
