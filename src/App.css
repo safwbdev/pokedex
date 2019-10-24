@@ -1,9 +1,9 @@
 .App{
-  padding-top: 4rem;
-  background: #fafafa;
+  padding-top: 6rem;
+  background: #ef5350;
 }
 .navbar {
-  background-color: #ef5350 !important;
+  background-color: red !important;
 }
 .card-title{
   text-transform: capitalize;
