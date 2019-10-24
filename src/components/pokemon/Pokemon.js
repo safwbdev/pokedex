@@ -82,8 +82,11 @@ export default class Pokemon extends Component {
                 case 'special-defense':
                     specialDefense = stat['base_stat'];
                     break;
-            }
-        });
+                default:
+                    return null;
+                }
+                return null;
+            });
 
         const height =
         Math.round((pokemonRes.data.height * 0.328084 + 0.0001) * 100) / 100;
@@ -121,8 +124,9 @@ export default class Pokemon extends Component {
             res.data.flavor_text_entries.some(flavor => {
                 if (flavor.language.name === 'en') {
                     description = flavor.flavor_text;
-                    return;
+                    return null;
                 }
+                return null;
             });
 
             const femaleRate = res.data['gender_rate'];
@@ -208,6 +212,7 @@ export default class Pokemon extends Component {
                                 <img
                                 src={this.state.imageUrl}
                                 className="card-img-top rounded mx-auto mt-2"
+                                alt=""
                                 />
                             </div>
                             <div className="col-md-9">
@@ -449,7 +454,7 @@ export default class Pokemon extends Component {
                     </div>
                     <div className="card-footer text-muted">
                         Data From{' '}
-                        <a href="https://pokeapi.co/" target="_blank" className="card-link">
+                        <a href="https://pokeapi.co/"  className="card-link">
                         PokeAPI.co
                         </a>
                     </div>
